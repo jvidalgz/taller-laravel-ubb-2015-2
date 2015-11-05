@@ -16,6 +16,7 @@ class CreateTableRamos extends Migration
             $table->increments('id');
             $table->integer('codigo');
             $table->string('nombre', 64);
+            $table->integer('creditos');
             $table->mediumText('descripcion');
             $table->boolean('estado');
         });
