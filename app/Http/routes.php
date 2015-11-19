@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('ramos', 'RamoController@index');
+Route::get('ramos/{id}', 'RamoController@show');
