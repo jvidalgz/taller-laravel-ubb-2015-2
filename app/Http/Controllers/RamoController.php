@@ -44,7 +44,7 @@ class RamoController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra una instancia de Ramo especifica
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
