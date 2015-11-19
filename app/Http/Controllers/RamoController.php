@@ -51,7 +51,9 @@ class RamoController extends Controller
      */
     public function show($id)
     {
-        //
+        $ramo = Ramo::find($id);
+
+        return $ramo;
     }
 
     /**
