@@ -19,7 +19,7 @@ class RamoController extends Controller
     {
         $ramos = Ramo::all();
 
-        return $ramos;
+        return view('ramos.index',compact('ramos'));
     }
 
     /**
