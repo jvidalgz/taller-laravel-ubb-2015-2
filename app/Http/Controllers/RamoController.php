@@ -17,7 +17,7 @@ class RamoController extends Controller
      */
     public function index()
     {
-        $ramos = Ramo::all();
+        $ramos = Ramo::paginate(6);
 
         return view('ramos.index',compact('ramos'));
     }
