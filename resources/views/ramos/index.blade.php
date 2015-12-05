@@ -2,6 +2,9 @@
 
 @section('contenido')
 
+    <ol class="breadcrumb">
+        <li class="active">Ramos</li>
+    </ol>
     <table class="table table-hover">
         <th>Codigo</th>
         <th>Nombre</th>
