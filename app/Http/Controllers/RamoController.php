@@ -29,7 +29,7 @@ class RamoController extends Controller
      */
     public function create()
     {
-        //
+        return view('ramos.create');
     }
 
     /**
