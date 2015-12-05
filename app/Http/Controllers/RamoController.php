@@ -23,7 +23,7 @@ class RamoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra formulario para crear un nuevo ramo
      *
      * @return \Illuminate\Http\Response
      */
@@ -33,7 +33,7 @@ class RamoController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un nuevo ramo
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -57,7 +57,7 @@ class RamoController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar un ramo.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -68,7 +68,7 @@ class RamoController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza un ramo identificado con '$id'.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
