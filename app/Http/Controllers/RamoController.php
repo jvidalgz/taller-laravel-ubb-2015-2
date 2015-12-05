@@ -83,7 +83,17 @@ class RamoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $ramo = Ramo::find($id);
+        $ramo->nombre = $request->input('nombre');
+        $ramo->description = $request->input('description');
+        $exito = $ramo->save();
+
+        if ($exito) {
+            return "Ramo actualizado con exito";
+        } else {
+            return "Ramo no actualizado";
+        }
     }
 
     /**
