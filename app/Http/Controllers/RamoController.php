@@ -69,7 +69,9 @@ class RamoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ramo = Ramo::find($id);
+
+        return view('ramos.edit', compact('ramo'));
     }
 
     /**
