@@ -41,6 +41,12 @@ class RamoController extends Controller
     public function store(Request $request)
     {
         //
+        $ramo = new Ramo();
+        $ramo->nombre = $request->input('nombre');
+        $ramo->description = $request->input('descripcion');
+        $ramo->save();
+
+        return "ramo almacenado";
     }
 
     /**
