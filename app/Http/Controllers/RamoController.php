@@ -58,7 +58,7 @@ class RamoController extends Controller
     {
         $ramo = Ramo::find($id);
 
-        return $ramo;
+        return view('ramos.show', compact('ramo'));
     }
 
     /**
