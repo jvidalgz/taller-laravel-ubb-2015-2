@@ -1,6 +1,15 @@
 @extends('master-layout')
 
     @section('contenido')
+
+        @if($errors->has())
+                <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                    {!! $error !!}
+            @endforeach
+                </div>
+        @endif
+
         {!! Form::open(['url' => 'ramos','class'=>'form-horizontal']) !!}
 
             <div class="form-group">
