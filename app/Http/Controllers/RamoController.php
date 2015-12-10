@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class RamoController extends Controller
 {
@@ -40,12 +41,30 @@ class RamoController extends Controller
      */
     public function store(Request $request)
     {
-        $ramo = new Ramo();
-        $ramo->nombre = $request->input('nombre');
-        $ramo->description = $request->input('descripcion');
-        $ramo->save();
+        $input = [
+             'nombre' => $request->input('nombre'),
+             'descripcion' => $request->input('descripcion'),
+        ];
 
-        return "ramo almacenado";
+        $rules = [
+            'nombre'=>      'required',
+            'descripcion'=> 'required',
+        ];
+
+        $validator = Validator::make($input, $rules);
+        if($validator->fails()){
+            return redirect()->to('ramos/create')->withErrors($validator->messages());
+        }else{
+            $ramo = new Ramo();
+            $ramo->nombre = $request->input('nombre');
+            $ramo->description = $request->input('descripcion');
+            $ramo->save();
+
+            return "ramo almacenado";
+
+        }
+
+
     }
 
     /**
